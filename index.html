@@ -126,7 +126,7 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
-            .one { font-size: 3rem; }
+            .one { font-size: 2.6rem; }
             .three { font-size: 2rem; }
             .custom-message { font-size: 1.4rem; }
             .transition-message { font-size: 1.8rem; }
@@ -230,9 +230,23 @@
       document.addEventListener('click', () => {
         let audio = document.getElementById("bg-music");
         audio.play().catch(error => console.log("Playback error:", error));
-    }, { once: true });  // Runs only once
+      }, { once: true });  // Runs only once
     
-
+        window.addEventListener('load', () => {
+        Swal.fire({
+            title: "Play background music?",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonText: "Yes",
+            cancelButtonText: "No"
+          }).then((result) => {
+          if (result.isConfirmed) {
+                let audio = document.getElementById("bg-music");
+                audio.play().catch(error => console.log("Playback error:", error));
+            }
+          });
+        });
+    
 
       
         function animateBalloons() {
@@ -272,7 +286,7 @@
             gsap.set([messages, memoryImages, noteImages, '#friendsNoteTrigger', '#finalMessage'], { opacity: 0 });
         
             // Step 1: Greeting and Birthday Message
-            tl.from('.one', { duration: 1, y: 50, opacity: 0 })
+            tl.from('.one', { duration: 1, y: 50, opacity: 0, delay: 2 })
               .from('.two', { duration: 0.8, y: 30, opacity: 0 }, '-=0.5')
               .to('.one, .two', { duration: 1, opacity: 0, y: -20 }, '+=3')
               .from('.three', { duration: 1.2, y: 40, opacity: 0, ease: 'bounce.out' })
