@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kausar!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: #DCD0FF; overflow-x: hidden; }
+        
+        /* Audio Element */
+        .song { visibility: hidden; }
+        .balloon-container {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: -1;
+        }
+    
+        .balloon {
+          position: absolute;
+          width: 300px;
+          height: auto;
+          animation: floatBalloon 6s infinite ease-in-out;
+        }
+    
+        @keyframes floatBalloon {
+          0% {
+            transform: translateY(100vh);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-10vh);
+            opacity: 0;
+          }
+        }
+
+        /* Main Container */
+        .container {
+            height: 100vh;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            visibility: hidden;
+            width: 100vw;
+        }
+        
+        /* Sections */
+        .container > div {
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 20vh;
+        }
+        
+        /* Text Styles */
+        .one { font-size: 4.5rem; color: #56365e;}
+        .two { font-size: 1.2rem; font-weight: lighter; color: #56365e;}
+        .three { font-size: 3rem; color: #56365e;}
+        .four { font-size: 3rem; color: #56365e;}
+        .custom-message {
+            padding: 1rem;
+            font-size: 2.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: lighter;
+            opacity: 0;
+            color: #56365e;
+        }
+        .flash { color: #000080; font-weight: normal; font-size: 3.25 rem; }
+        
+        /* Image Showcase */
+        .image-showcase {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 80vh;
+            opacity: 0;
+            transition: opacity 0.5s;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .image-showcase.active { opacity: 1; }
+        
+        /* Transition Messages */
+        .transition-message {
+            font-size: 3rem;
+            color: #56365e;
+            text-align: center;
+            margin: 5rem 0;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            top: 30%;
+        }
+        
+        /* Final Message */
+        .final-message {
+          font-size: 4rem;
+          color: #56365e;
+          text-align: center;
+          margin-top: 4rem;
+          opacity: 0;
+          position: absolute;
+          width: 100%;
+          top: 40%;
+        }
+        
+        .signature {
+          font-size: 2.5rem;
+          margin-top: 1.5rem;
+          color: #2F1A34;
+          font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .one { font-size: 3rem; }
+            .three { font-size: 2rem; }
+            .custom-message { font-size: 1.4rem; }
+            .transition-message { font-size: 1.8rem; }
+            .final-message { font-size: 2rem; }
+            .image-showcase { max-width: 95%; }
+        }
+
+    </style>
+</head>
+
+<body>
+  <audio id="bg-music" autoplay loop>
+    <source src="strawberriesncigs.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+    <!-- Balloon container for background animation -->
+    <div class="balloon-container"></div>
+
+    <div class="container">
+        <!-- Initial Sections -->
+        <div class="one">
+            <h1>Hii <span id="name">Kausarrrr</span></h1>
+            <p class="two" id="greetingText">(teja lvdi)</p>
+        </div>
+
+        <div class="three">
+            <h2>But heyyyy, it's your birthday (finally)!!</h2>
+        </div>
+
+        <!-- Personal Messages -->
+        <div class="four custom-message">
+            <p>I've known you for almost 2 yrs now and in that time, you've been one of the most incredible influences in my life.</p>
+        </div>
+        <div class="four custom-message">
+            <p>Your advice, both academic and personal, has been invaluable. Thanks to youuu, I managed to score an insane pointer even through all the challenges. (uk exactly how shitty my sem 3 was)</p>
+        </div>
+        <div class="four custom-message">
+            <p>I seriously don't know how I survived that period (October to December especially), but your life advices (academic thingy mainly) really helped me in more ways than you could imagine.</p>
+        </div>
+        <div class="four custom-message flash">
+            <p>THANKK YOUU! SO SO SO MUCH FOR THAT FOR THE MILLIONTH TIME</p>
+            <p></p>
+            <p>(uk you are getting more of that 🤣🤣)</p>
+        </div>
+        <div class="four custom-message">
+            <p>Trust me you're one of the finest, most intelligent people I've known - both emotionally and academically.</p>
+        </div>
+        <div class="four custom-message">
+          <p>I respect you a lot and you are like a mentor/teacher (shishya) to me at this point.</p>
+      </div>
+        <div class="four custom-message">
+            <p>I really really appreciate your existence and am forever grateful for your guidance and love. And thanks for checking up on me time to time, it means a lot.</p>
+        </div>
+        <div class="four custom-message">
+            <p>You're truly an amazing person Kausar, and I hope you have the happiest birthday (offically buddhi)!!</p>
+        </div>
+        <div class="four custom-message">
+          <p>This took a decent amount of time to figure out (UT ke 2 din pehle 🤣) but hope you like it :D</p>
+        </div>
+
+        <!-- Memory Images (10) -->
+        <img src="img\memory1.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory2.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory3.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory4.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory5.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory6.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory7.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory8.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory9.jpg" class="image-showcase" data-set="1">
+        <img src="img\memory10.jpg" class="image-showcase" data-set="1">
+
+        <!-- Transition Message -->
+        <div class="transition-message" id="friendsNoteTrigger">
+            Now time for some notes from your closest friends!
+        </div>
+
+        <!-- Friend Notes Images (5) -->
+        <img src="img\note1.jpg" class="image-showcase" data-set="2">
+        <img src="img\note2.jpg" class="image-showcase" data-set="2">
+        <img src="img\note3.jpg" class="image-showcase" data-set="2">
+        <img src="img\note4.jpg" class="image-showcase" data-set="2">
+        <img src="img\note5.jpg" class="image-showcase" data-set="2">
+
+        <!-- Final Message -->
+        <div class="final-message" id="finalMessage">
+            Happy birthday and thanks once again for everything - LY and take care!
+            <div class="signature"><strong>-Satyam 💙💙</strong></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+      <script>
+
+      
+      document.addEventListener('click', () => {
+        let audio = document.getElementById("bg-music");
+        audio.play().catch(error => console.log("Playback error:", error));
+    }, { once: true });  // Runs only once
+    
+
+
+      
+        function animateBalloons() {
+          const balloonContainer = document.querySelector('.balloon-container');
+          const balloonImages = [
+            'img/balloons/balloon1.svg',
+            'img/balloons/balloon2.svg',
+            'img/balloons/balloon3.svg'
+          ];
+          
+          setInterval(() => {
+            const balloon = document.createElement('img');
+            balloon.classList.add('balloon');
+            const randomIndex = Math.floor(Math.random() * balloonImages.length);
+            balloon.src = balloonImages[randomIndex];
+            balloon.style.left = Math.random() * 100 + 'vw';
+            balloon.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            balloonContainer.appendChild(balloon);
+            setTimeout(() => balloon.remove(), 7000);
+          }, 1500);
+        }
+      
+        document.addEventListener('DOMContentLoaded', () => {
+          setTimeout(() => {
+            animateBalloons();
+            startAnimations();
+        }, 2000);
+  
+          function startAnimations() {
+            const tl = gsap.timeline();
+            const messages = document.querySelectorAll('.custom-message');
+            const memoryImages = document.querySelectorAll('[data-set="1"]');
+            const noteImages = document.querySelectorAll('[data-set="2"]');
+        
+            // Initial setup
+            gsap.set('.container', { visibility: 'visible' });
+            gsap.set([messages, memoryImages, noteImages, '#friendsNoteTrigger', '#finalMessage'], { opacity: 0 });
+        
+            // Step 1: Greeting and Birthday Message
+            tl.from('.one', { duration: 1, y: 50, opacity: 0 })
+              .from('.two', { duration: 0.8, y: 30, opacity: 0 }, '-=0.5')
+              .to('.one, .two', { duration: 1, opacity: 0, y: -20 }, '+=3')
+              .from('.three', { duration: 1.2, y: 40, opacity: 0, ease: 'bounce.out' })
+              .to('.three', { duration: 1, opacity: 0, y: -30 }, '+=4');
+        
+            // Step 2: Personal Messages (Sequential)
+            messages.forEach((msg, index) => {
+                tl.to(msg, { opacity: 1, duration: 1 })
+                  .to(msg, { opacity: 0, duration: 1 }, '+=5');
+            });
+        
+            // Step 3: Memory Images (2s each)
+            memoryImages.forEach((img, index) => {
+                tl.to(img, { opacity: 1, duration: 1 })
+                  .to(img, { opacity: 0, duration: 1 }, '+=1'); // Show for 2s total
+            });
+        
+            // Step 4: Transition Message (for 2s)
+            tl.to('#friendsNoteTrigger', { opacity: 1, duration: 1 })
+              .to('#friendsNoteTrigger', { opacity: 0, duration: 1 }, '+=2');
+        
+            // Step 5: Friend Notes (5s each)
+            noteImages.forEach((img, index) => {
+                tl.to(img, { opacity: 1, duration: 1 })
+                  .to(img, { opacity: 0, duration: 1 }, '+=4'); // Show for 5s total
+            });
+        
+            // Step 6: Final Message
+            tl.to('#finalMessage', { opacity: 1, duration: 2 });
+        }
+        
+
+        });
+      </script>
+</body>
+</html>
