@@ -87,23 +87,10 @@
             max-width: 80%;
             max-height: 80vh;
             opacity: 0;
-            transition: opacity 0.5s;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.3);
         }
         .image-showcase.active { opacity: 1; }
-        
-        /* Transition Messages */
-        .transition-message {
-            font-size: 3rem;
-            color: #56365e;
-            text-align: center;
-            margin: 5rem 0;
-            opacity: 0;
-            position: absolute;
-            width: 100%;
-            top: 30%;
-        }
         
         /* Final Message */
         .final-message {
@@ -129,7 +116,6 @@
             .one { font-size: 2.6rem; }
             .three { font-size: 2rem; }
             .custom-message { font-size: 1.4rem; }
-            .transition-message { font-size: 1.8rem; }
             .final-message { font-size: 2rem; }
             .image-showcase { max-width: 95%; }
         }
@@ -158,6 +144,20 @@
         </div>
 
         <!-- Personal Messages -->
+        <div class="four custom-message">
+          <p>(I hope this shit doesn't break midway loll)</p>
+        </div>
+        <div class="four custom-message">
+          <p>Initially I was planning to do a written note onli but thought of doing something wholesome.</p>
+        </div>
+        <div class="four custom-message">
+          <p>This took incredibly long but hope it's worth the efforts -</p>
+        </div>
+        
+
+
+
+
         <div class="four custom-message">
             <p>I've known you for almost 2 yrs now and in that time, you've been one of the most incredible influences in my life.</p>
         </div>
@@ -200,10 +200,7 @@
         <img src="img\memory9.jpg" class="image-showcase" data-set="1">
         <img src="img\memory10.jpg" class="image-showcase" data-set="1">
 
-        <!-- Transition Message -->
-        <div class="transition-message" id="friendsNoteTrigger">
-            Now time for some notes from your closest friends!
-        </div>
+        
 
         <!-- Friend Notes Images (5) -->
         <img src="img\note1.jpg" class="image-showcase" data-set="2">
@@ -300,8 +297,8 @@
         
             // Step 3: Memory Images (2s each)
             memoryImages.forEach((img, index) => {
-                tl.to(img, { opacity: 1, duration: 1 })
-                  .to(img, { opacity: 0, duration: 1 }, '+=1'); // Show for 2s total
+                tl.to(img, { opacity: 1, duration: 1.5 })
+                  .to(img, { opacity: 0, duration: 1.5 }, '+=1'); // Show for 2s total
             });
         
             // Step 4: Transition Message (for 2s)
